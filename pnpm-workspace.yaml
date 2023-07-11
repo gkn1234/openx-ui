@@ -1,0 +1,5 @@
+packages:
+  # 根目录下的 docs 是一个独立的文档应用，应该被划分为一个模块
+  - docs
+  # packages 目录下的每一个目录都作为一个独立的模块
+  - packages/*

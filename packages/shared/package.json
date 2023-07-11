@@ -1,0 +1,39 @@
+{
+  "name": "@openxui/shared",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": ["vue", "ui", "component library"],
+  "author": "OpenX",
+  "license": "MIT",
+  "homepage": "https://github.com/gkn1234/openx-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkn1234/openx-ui.git"
+  },
+  "bugs": { 
+    "url" : "https://github.com/gkn1234/openx-ui/issues"
+  },
+  "scripts": {
+    "build": "echo build",
+    "test": "echo test"
+  },
+  "main": "",
+  "module": "",
+  "types": "",
+  "exports": {
+    ".": {
+      "require": "",
+      "module": "",
+      "types": ""
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

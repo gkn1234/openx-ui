@@ -1,0 +1,9 @@
+{
+  "name": "openx-ui",
+  "private": true,
+  "scripts": {
+    "hello": "echo 'hello world'"
+  },
+  "devDependencies": {
+  }
+}
