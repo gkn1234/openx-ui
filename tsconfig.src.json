@@ -1,0 +1,14 @@
+{
+  // 继承基础配置
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    // 组件库依赖浏览器的 DOM API
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+  },
+  "include": [
+    "typings/env.d.ts",
+    "packages/**/src"
+  ],
+}

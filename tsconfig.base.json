@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // 项目的根目录
+    "rootDir": ".",
+    // 项目基础目录
+    "baseUrl": ".",
+    // tsc 编译产物输出目录
+    "outDir": "dist",
+    // 编译目标 js 的版本
+    "target": "es2022",
+    // 
+    "module": "esnext",
+    // 模块解析策略
+    "moduleResolution": "node",
+    // 是否生成辅助 debug 的 .map.js 文件。 
+    "sourceMap": false,
+    // 产物不消除注释
+    "removeComments": false,
+    // 严格模式类型检查，建议开启
+    "strict": true,
+    // 不允许有未使用的变量
+    "noUnusedLocals": true,
+    // 允许引入 .json 模块
+    "resolveJsonModule": true,
+
+    // 与 esModuleInterop: true 配合允许从 commonjs 的依赖中直接按 import XX from 'xxx' 的方式导出 default 模块。
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // 在使用 const enum 或隐式类型导入时受到 TypeScript 的警告
+    "isolatedModules": true,
+    // 检查类型时是否跳过类型声明文件，一般在上游依赖存在类型问题时置为 true。
+    "skipLibCheck": true,
+    // 引入 ES 的功能库
+    "lib": [],
+    // 默认引入的模块类型声明
+    "types": [],
+    // 路径别名设置
+    "paths": {
+      "@openxui/*": ["packages/*/src"]
+    }
+  }
+}
