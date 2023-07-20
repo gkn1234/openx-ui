@@ -1,0 +1,12 @@
+{
+  "name": "@openxui/demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@openxui/ui": "workspace:^"
+  },
+  "devDependencies": {
+  }
+}

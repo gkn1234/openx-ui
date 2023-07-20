@@ -1,0 +1,39 @@
+{
+  "Vue SFC Template": {
+    // 代码块搜索前缀
+    "prefix": "sfc",
+    "body": [
+      "<script setup lang=\"${1:ts}\">",
+      "import { ref } from 'vue'",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>${3:contents}</div>",
+      "</template>",
+      "",
+      "<style scoped lang=\"${4:scss}\">",
+      "</style>"
+    ],
+    "description": "初始化 vue3 SFC 模板"
+  },
+  "Vue Define Props": {
+    "prefix": "props",
+    "body": [
+      "const props = withDefaults(defineProps<{",
+      "  prop1?: string;",
+      "}>(), {",
+      "  prop1: '',",
+      "});"
+    ],
+    "description": "初始化 vue3 props 定义"
+  },
+  "Vue Define Emits": {
+    "prefix": "emits",
+    "body": [
+      "const emit = defineEmits<{",
+      "  (event: 'event1'): void;",
+      "}>();"
+    ],
+    "description": "初始化 vue3 emits 定义"
+  }
+}

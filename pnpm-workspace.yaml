@@ -3,3 +3,4 @@ packages:
   - docs
   # packages 目录下的每一个目录都作为一个独立的模块
   - packages/*
+  - demo

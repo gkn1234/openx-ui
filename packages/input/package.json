@@ -14,17 +14,17 @@
     "url" : "https://github.com/gkn1234/openx-ui/issues"
   },
   "scripts": {
-    "build": "echo build",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "",
-  "module": "",
-  "types": "",
+  "main": "./dist/openxui-input.umd.js",
+  "module": "./dist/openxui-input.umd.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "",
-      "module": "",
-      "types": ""
+      "require": "./dist/openxui-input.umd.js",
+      "module": "./dist/openxui-input.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
@@ -34,6 +34,8 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@openxui/shared": "workspace:^"
+  },
   "devDependencies": {}
 }

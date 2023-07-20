@@ -1,0 +1,24 @@
+{
+  // 继承基础配置
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // 该 ts project 将被视作一个部分，通过项目引用(Project References)功能集成到一个 tsconfig.json 中
+    "composite": true,
+    // node 脚本没有 dom 环境，因此只集成 esnext 库即可
+    "lib": ["ESNext"],
+    // 集成 Node.js 库函数的类型声明
+    "types": ["node"],
+    // 脚本有时会以 js 编写，因此允许 js
+    "allowJs": true
+  },
+  "include": [
+    // 目前项目中暂时只有配置文件，如 vite.config.ts，以后会逐步增加
+    "**/*.config.*",
+    "scripts"
+  ],
+  "exclude": [
+    // 暂时先排除产物目录，packages/xxx/dist/x.config.js 或者 node_modules/pkg/x.config.js 不会被包含进来
+    "**/dist",
+    "**/node_modules"
+  ]
+}

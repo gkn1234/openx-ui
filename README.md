@@ -5,4 +5,12 @@
 
 `chapter${index}` 分支对应了分享的第 `index` 章节。
 
-[1. 基于 pnpm 搭建 monorepo 工程目录结构](https://github.com/gkn1234/openx-ui/tree/chapter01)
+### 1. 基于 pnpm 搭建 monorepo 工程目录结构
+[文章](https://juejin.cn/post/7254369672823586873)
+
+[代码](https://github.com/gkn1234/openx-ui/tree/chapter01)
+
+### 2. 在 monorepo 模式下集成 Vite 和 TypeScript
+[文章](https://juejin.cn/post/7254369672823586873)
+
+[代码](https://github.com/gkn1234/openx-ui/tree/chapter02)

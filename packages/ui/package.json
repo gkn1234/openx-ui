@@ -1,5 +1,5 @@
 {
-  "name": "@openxui/button",
+  "name": "@openxui/ui",
   "version": "0.0.0",
   "description": "",
   "keywords": ["vue", "ui", "component library"],
@@ -17,13 +17,13 @@
     "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/openxui-button.umd.js",
-  "module": "./dist/openxui-button.umd.js",
+  "main": "./dist/openxui-ui.umd.js",
+  "module": "./dist/openxui-ui.umd.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/openxui-button.umd.js",
-      "module": "./dist/openxui-button.umd.js",
+      "require": "./dist/openxui-ui.umd.js",
+      "module": "./dist/openxui-ui.umd.js",
       "types": "./dist/index.d.ts"
     }
   },
@@ -35,6 +35,8 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
+    "@openxui/button": "workspace:^",
+    "@openxui/input": "workspace:^",
     "@openxui/shared": "workspace:^"
   },
   "devDependencies": {}
