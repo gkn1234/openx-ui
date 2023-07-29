@@ -13,7 +13,10 @@ function clickHandler() {
 </script>
 
 <template>
-  <button class="openx-button" @click="clickHandler">
-    <slot></slot>
+  <button
+    class="openx-button"
+    @click="clickHandler"
+  >
+    <slot />
   </button>
 </template>

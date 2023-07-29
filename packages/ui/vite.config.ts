@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
@@ -13,11 +13,11 @@ export default defineConfig({
     rollupOptions: {
       external: [
         /@openxui.*/,
-        'vue'
+        'vue',
       ],
 
       output: {
-      }
+      },
     },
-  }
-})
+  },
+});
