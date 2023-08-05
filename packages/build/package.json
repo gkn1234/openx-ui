@@ -1,5 +1,5 @@
 {
-  "name": "@openxui/ui",
+  "name": "@openxui/build",
   "version": "0.0.0",
   "description": "",
   "keywords": [
@@ -18,19 +18,16 @@
     "url": "https://github.com/gkn1234/openx-ui/issues"
   },
   "scripts": {
-    "build:package": "vite build --mode package",
-    "build:full": "vite build --mode full",
-    "build:full-min": "vite build --mode full-min",
-    "build": "pnpm run build:package && pnpm run build:full && pnpm run build:full-min",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/openxui-ui.umd.js",
-  "module": "./dist/openxui-ui.mjs",
+  "main": "./dist/openxui-build.umd.js",
+  "module": "./dist/openxui-build.mjs",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/openxui-ui.umd.js",
-      "import": "./dist/openxui-ui.mjs",
+      "require": "./dist/openxui-build.umd.js",
+      "import": "./dist/openxui-build.mjs",
       "types": "./dist/src/index.d.ts"
     }
   },
@@ -39,12 +36,20 @@
     "README.md"
   ],
   "peerDependencies": {
+    "vite": ">=3.0.0",
     "vue": ">=3.0.0"
   },
-  "dependencies": {
-    "@openxui/button": "workspace:^",
-    "@openxui/input": "workspace:^",
-    "@openxui/shared": "workspace:^"
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@rollup/plugin-replace": "^5.0.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "type-fest": "^4.1.0",
+    "typescript": "^5.1.6",
+    "vite-plugin-inspect": "^0.7.35"
+  }
 }

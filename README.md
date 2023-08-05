@@ -23,3 +23,9 @@
 [文章](https://juejin.cn/post/7260499321983336509)
 
 [代码](https://github.com/gkn1234/openx-ui/tree/chapter03)
+
+### 4. 定制组件库的打包体系
+
+[文章](https://juejin.cn/post/7260499321983336509)
+
+[代码](https://github.com/gkn1234/openx-ui/tree/chapter04)

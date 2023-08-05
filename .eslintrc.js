@@ -82,6 +82,7 @@ module.exports = defineConfig({
         'scripts/**',
       ],
       rules: {
+        'import/no-relative-packages': 'off',
         'no-console': 'off',
       },
     },

@@ -2,7 +2,11 @@
   "name": "@openxui/input",
   "version": "0.0.0",
   "description": "",
-  "keywords": ["vue", "ui", "component library"],
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
   "author": "OpenX",
   "license": "MIT",
   "homepage": "https://github.com/gkn1234/openx-ui/blob/master/README.md",
@@ -10,21 +14,21 @@
     "type": "git",
     "url": "git+https://github.com/gkn1234/openx-ui.git"
   },
-  "bugs": { 
-    "url" : "https://github.com/gkn1234/openx-ui/issues"
+  "bugs": {
+    "url": "https://github.com/gkn1234/openx-ui/issues"
   },
   "scripts": {
     "build": "vite build",
     "test": "echo test"
   },
   "main": "./dist/openxui-input.umd.js",
-  "module": "./dist/openxui-input.umd.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/openxui-input.mjs",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/openxui-input.umd.js",
-      "module": "./dist/openxui-input.umd.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/openxui-input.mjs",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "files": [

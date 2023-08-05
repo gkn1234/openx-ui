@@ -1,23 +1,4 @@
 import { defineConfig } from 'vite';
+import { generateVueConfig } from '../build/build.config';
 
-export default defineConfig({
-  build: {
-    lib: {
-      entry: './src/index.ts',
-      name: 'OpenxuiShared',
-      fileName: 'openxui-shared',
-    },
-
-    minify: false,
-
-    rollupOptions: {
-      external: [
-        /@openxui.*/,
-        'vue',
-      ],
-
-      output: {
-      },
-    },
-  },
-});
+export default defineConfig(({ mode }) => generateVueConfig({ mode: mode as any }));

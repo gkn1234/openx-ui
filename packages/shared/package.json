@@ -22,13 +22,13 @@
     "test": "echo test"
   },
   "main": "./dist/openxui-shared.umd.js",
-  "module": "./dist/openxui-shared.umd.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/openxui-shared.mjs",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/openxui-shared.umd.js",
-      "module": "./dist/openxui-shared.umd.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/openxui-shared.mjs",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "files": [
@@ -38,8 +38,5 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
-  "dependencies": {
-    "@types/lodash": "^4.14.195",
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }
