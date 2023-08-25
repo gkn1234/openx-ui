@@ -1,7 +1,90 @@
-.test-class {
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+$button-types: primary, success, warning, danger, info;
+
+@mixin button-type-styles() {
+  @each $type in $button-types {
+    &.op-button--#{$type} {
+      --op-button-color: rgb(var(--op-color-reverse));
+      --op-button-bg-color: rgb(var(--op-color-#{$type}));
+      --op-button-border-color: rgb(var(--op-color-#{$type}));
+      --op-button-hover-color: rgb(var(--op-color-reverse));
+      --op-button-hover-bg-color: rgb(var(--op-color-#{$type}-light-3));
+      --op-button-hover-border-color: rgb(var(--op-color-#{$type}-light-3));
+      --op-button-active-color: rgb(var(--op-color-reverse));
+      --op-button-active-bg-color: rgb(var(--op-color-#{$type}-dark-2));
+      --op-button-active-border-color: rgb(var(--op-color-#{$type}-dark-2));
+      --op-button-disabled-color: rgb(var(--op-color-reverse));
+      --op-button-disabled-bg-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-button-disabled-border-color: rgb(var(--op-color-#{$type}-light-5));
+    }
+  }
+}
+
+@mixin button-plain-styles() {
+  @each $type in $button-types {
+    &.op-button--#{$type} {
+      --op-button-color: rgb(var(--op-color-#{$type}));
+      --op-button-bg-color: rgb(var(--op-color-#{$type}-light-9));
+      --op-button-border-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-button-hover-color: rgb(var(--op-color-reverse));
+      --op-button-hover-bg-color: rgb(var(--op-color-#{$type}));
+      --op-button-hover-border-color: rgb(var(--op-color-#{$type}));
+      --op-button-disabled-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-button-disabled-bg-color: rgb(var(--op-color-#{$type}-light-9));
+      --op-button-disabled-border-color: rgb(var(--op-color-#{$type}-light-8));
+    }
+  }
+}
+
+.op-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-button-padding-y) var(--op-button-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-button-color);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--op-button-bg-color);
+  border-color: var(--op-button-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    color: var(--op-button-hover-color);
+    background-color: var(--op-button-hover-bg-color);
+    border-color: var(--op-button-hover-border-color);
+  }
+
+  &:active {
+    color: var(--op-button-active-color);
+    background-color: var(--op-button-active-bg-color);
+    border-color: var(--op-button-active-border-color);
+  }
+
+  @include button-type-styles;
+
+  &.op-button--plain {
+    --op-button-hover-color: rgb(var(--op-color-primary));
+    --op-button-hover-bg-color: rgb(var(--op-color-card));
+    --op-button-hover-border-color: rgb(var(--color-primary));
+
+    @include button-plain-styles;
+  }
+
+  &.op-button--disabled,
+  &.op-button--disabled:hover,
+  /* stylelint-disable-next-line selector-class-pattern */
+  &.op-button--disabled:active {
+    color: var(--op-button-disabled-color);
+    cursor: not-allowed;
+    background-color: var(--op-button-disabled-bg-color);
+    border-color: var(--op-button-disabled-border-color);
+  }
 }

@@ -1,0 +1,54 @@
+{
+  "name": "@openxui/styles",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "OpenX",
+  "license": "MIT",
+  "homepage": "https://github.com/gkn1234/openx-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkn1234/openx-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gkn1234/openx-ui/issues"
+  },
+  "scripts": {
+    "build:theme": "vite build --mode theme",
+    "build:unocss": "vite build --mode unocss",
+    "build": "pnpm run build:unocss && pnpm run build:theme",
+    "test": "echo test"
+  },
+  "main": "./dist/openxui-styles.umd.js",
+  "module": "./dist/openxui-styles.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/openxui-styles.umd.js",
+      "import": "./dist/openxui-styles.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./preset": {
+      "require": "./dist/preset.umd.js",
+      "import": "./dist/preset.mjs",
+      "types": "./dist/src/unoPreset.d.ts"
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0",
+    "unocss": ">=0.54.1"
+  },
+  "dependencies": {
+    "@openxui/shared": "workspace:^"
+  }
+}

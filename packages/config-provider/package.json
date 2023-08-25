@@ -1,0 +1,47 @@
+{
+  "name": "@openxui/config-provider",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "OpenX",
+  "license": "MIT",
+  "homepage": "https://github.com/gkn1234/openx-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkn1234/openx-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gkn1234/openx-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/openxui-config-provider.umd.js",
+  "module": "./dist/openxui-config-provider.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/openxui-config-provider.umd.js",
+      "import": "./dist/openxui-config-provider.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@openxui/styles": "workspace:^",
+    "@openxui/shared": "workspace:^"
+  }
+}

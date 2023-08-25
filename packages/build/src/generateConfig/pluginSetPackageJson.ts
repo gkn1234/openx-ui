@@ -21,13 +21,14 @@ export function pluginSetPackageJson(
   packageJson: PackageJson = {},
   options: GenerateConfigOptions = {},
 ): PluginOption {
+  const finalOptions = getOptions(options);
   const {
     onSetPkg,
     mode,
     fileName,
     outDir,
-    dts,
-  } = getOptions(options);
+    exports,
+  } = finalOptions;
 
   if (mode !== 'package') {
     return null;
@@ -50,32 +51,35 @@ export function pluginSetPackageJson(
         absCwd(outDir, getOutFileName(finalName, 'umd', mode)),
         false,
       );
-      packageJsonObj.main = umd;
       exportsData.require = umd;
+      if (exports === '.') { packageJsonObj.main = umd; }
 
       // 获取并设置 es 产物的路径
       const es = relCwd(
         absCwd(outDir, getOutFileName(finalName, 'es', mode)),
         false,
       );
-      packageJsonObj.module = es;
       exportsData.import = es;
+      if (exports === '.') { packageJsonObj.module = es; }
 
       // 获取并设置 d.ts 产物的路径
-      if (dts) {
-        const dtsEntry = getDtsPath(options);
-        packageJsonObj.types = dtsEntry;
-        exportsData.types = dtsEntry;
-      }
+      const dtsEntry = getDtsPath(options);
+      packageJsonObj.types = dtsEntry;
+      exportsData.types = dtsEntry;
+      if (exports === '.') { packageJsonObj.types = dtsEntry; }
 
       if (!isObjectLike(packageJsonObj.exports)) {
         packageJsonObj.exports = {};
       }
-      Object.assign(packageJsonObj.exports, { '.': exportsData });
+      Object.assign(packageJsonObj.exports, {
+        [exports]: exportsData,
+        // 默认暴露的出口
+        './*': './*',
+      });
 
       // 支持在构建选项中的 onSetPkg 钩子中对 package.json 对象进行进一步修改
       if (isFunction(onSetPkg)) {
-        await onSetPkg(packageJsonObj);
+        await onSetPkg(packageJsonObj, finalOptions);
       }
 
       // 回写入 package.json 文件

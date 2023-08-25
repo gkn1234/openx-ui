@@ -29,7 +29,9 @@
       "require": "./dist/openxui-button.umd.js",
       "import": "./dist/openxui-button.mjs",
       "types": "./dist/src/index.d.ts"
-    }
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",

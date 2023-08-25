@@ -1,0 +1,45 @@
+{
+  "name": "@openxui/icons",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "OpenX",
+  "license": "MIT",
+  "homepage": "https://github.com/gkn1234/openx-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkn1234/openx-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gkn1234/openx-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/openxui-icons.umd.js",
+  "module": "./dist/openxui-icons.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/openxui-icons.umd.js",
+      "import": "./dist/openxui-icons.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./icons.css": "./dist/icons.css",
+    "./icons.json": "./dist/icons.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@iconify/tools": "^3.0.5",
+    "@iconify/utils": "^2.1.9"
+  }
+}

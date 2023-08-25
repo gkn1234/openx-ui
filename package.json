@@ -16,6 +16,7 @@
     "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "@unocss/transformer-directives": "^0.55.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -24,6 +25,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-vue": "^9.15.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
@@ -34,6 +36,7 @@
     "stylelint-stylistic": "^0.4.3",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6",
+    "unocss": "^0.55.2",
     "vite": "^4.4.4",
     "vue-eslint-parser": "^9.3.1",
     "vue-tsc": "^1.8.5"

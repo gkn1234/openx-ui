@@ -29,7 +29,8 @@
       "require": "./dist/openxui-input.umd.js",
       "import": "./dist/openxui-input.mjs",
       "types": "./dist/src/index.d.ts"
-    }
+    },
+    "./*": "./*"
   },
   "files": [
     "dist",

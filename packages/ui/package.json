@@ -32,7 +32,9 @@
       "require": "./dist/openxui-ui.umd.js",
       "import": "./dist/openxui-ui.mjs",
       "types": "./dist/src/index.d.ts"
-    }
+    },
+    "./*": "./*",
+    "./style/*": "./dist/style/*"
   },
   "files": [
     "dist",
@@ -43,8 +45,9 @@
   },
   "dependencies": {
     "@openxui/button": "workspace:^",
+    "@openxui/config-provider": "workspace:^",
     "@openxui/input": "workspace:^",
-    "@openxui/shared": "workspace:^"
-  },
-  "devDependencies": {}
+    "@openxui/shared": "workspace:^",
+    "@openxui/styles": "workspace:^"
+  }
 }
