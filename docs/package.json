@@ -2,11 +2,12 @@
   "name": "@openxui/docs",
   "private": true,
   "scripts": {
-    "dev": "echo dev",
-    "build": "echo build"
+    "dev": "vitepress dev . --host",
+    "build": "vitepress build .",
+    "preview": "vitepress preview . --host"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "vitepress": "1.0.0-rc.31"
   }
 }

@@ -1,3 +1,3 @@
-import { generateConfig } from './build.config';
+import { generateConfig } from './scripts';
 
 export default generateConfig();

@@ -73,10 +73,10 @@ function pluginMoveStyles(mode: string): PluginOption {
       }
 
       // 主题样式放到队首，在合并 CSS 时具有最高优先级
-      const themeIndex = packages.findIndex((pkg) => pkg === 'theme');
+      const themeIndex = packages.findIndex((pkg) => pkg === 'styles');
       if (themeIndex > 0) {
         packages.splice(themeIndex, 1);
-        packages.unshift('theme');
+        packages.unshift('styles');
       }
 
       // 一边移动每个组件各自的样式，一边拼接全量样式 index.css
