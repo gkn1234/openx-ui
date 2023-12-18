@@ -5,6 +5,7 @@ import componentsConfig from '../configs/components.json';
 
 // 配置参考：https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/openx-ui/',
   title: 'OpenxUI',
   description: 'Vue3 组件库',
   ignoreDeadLinks: true,
