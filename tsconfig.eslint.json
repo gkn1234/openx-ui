@@ -9,7 +9,9 @@
   "include": [
     "**/*",
     // .xxx.js 文件需要单独声明，例如 .eslintrc.js
-    "**/.*.*"
+    "**/.*.*",
+    // .vitepress 目录
+    "**/.vitepress/**/*"
   ],
   "exclude": [
     // 排除产物目录

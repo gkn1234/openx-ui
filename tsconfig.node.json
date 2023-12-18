@@ -12,9 +12,13 @@
     "allowJs": true
   },
   "include": [
+    "packages/build/src",
+    "packages/styles/src/unoPreset.ts",
+    "packages/styles/src/unocss",
+    "packages/icons/src",
     // 目前项目中暂时只有配置文件，如 vite.config.ts，以后会逐步增加
     "**/*.config.*",
-    "scripts"
+    "**/scripts"
   ],
   "exclude": [
     // 暂时先排除产物目录，packages/xxx/dist/x.config.js 或者 node_modules/pkg/x.config.js 不会被包含进来

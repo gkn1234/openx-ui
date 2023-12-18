@@ -29,3 +29,9 @@
 [文章](https://juejin.cn/post/7263829911398449208)
 
 [代码](https://github.com/gkn1234/openx-ui/tree/chapter04)
+
+### 5. 设计组件库的样式方案
+
+[文章](https://juejin.cn/post/7270868354528755764)
+
+[代码](https://github.com/gkn1234/openx-ui/tree/chapter05)

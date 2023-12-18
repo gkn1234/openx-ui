@@ -29,17 +29,23 @@
       "require": "./dist/openxui-input.umd.js",
       "import": "./dist/openxui-input.mjs",
       "types": "./dist/src/index.d.ts"
-    }
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
   "dependencies": {
+    "@openxui/button": "workspace:^",
     "@openxui/shared": "workspace:^"
-  },
-  "devDependencies": {}
+  }
 }

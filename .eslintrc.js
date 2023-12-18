@@ -49,9 +49,19 @@ module.exports = defineConfig({
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
+    'import/no-relative-packages': 'off',
 
     // vue 允许单单词组件名
     'vue/multi-word-component-names': 'off',
+
+    'vue/max-attributes-per-line': ['error', {
+      singleline: {
+        max: 3,
+      },
+      multiline: {
+        max: 1,
+      },
+    }],
 
     '@typescript-eslint/no-use-before-define': [
       'error',
@@ -70,6 +80,12 @@ module.exports = defineConfig({
 
     // 换行符不作约束
     'linebreak-style': 'off',
+
+    'no-await-in-loop': 'off',
+
+    'no-param-reassign': ['error', { props: false }],
+
+    'no-continue': 'off',
   },
 
   // 文件级别的重写
@@ -79,7 +95,7 @@ module.exports = defineConfig({
       files: [
         '**/vite.config.*',
         '**/vitest.config.*',
-        'scripts/**',
+        '**/scripts/**',
       ],
       rules: {
         'import/no-relative-packages': 'off',
