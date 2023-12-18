@@ -17,4 +17,10 @@ export default defineConfig({
       },
     ],
   },
+  optimizeDeps: {
+    exclude: ['@vue/repl'],
+  },
+  ssr: {
+    noExternal: ['@vue/repl'],
+  },
 });
