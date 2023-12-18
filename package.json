@@ -8,7 +8,8 @@
     "clean:type": "rimraf ./dist",
     "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
     "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
-    "build:ui": "pnpm run type:src && pnpm --filter ./packages/** run build"
+    "build:ui": "pnpm run type:src && pnpm --filter \"./packages/**\" run build",
+    "build:docs": "pnpm --filter \"@openxui/docs\" run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
