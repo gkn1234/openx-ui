@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useData } from 'vitepress';
 
 const props = withDefaults(defineProps<{
   /** 用例源码 */
@@ -9,6 +10,8 @@ const props = withDefaults(defineProps<{
 });
 
 const MAIN_FILE_NAME = 'App.vue';
+
+const { site } = useData();
 
 // 将用例源码按照 Playground 的规则转换为 Base64 编码
 const sourceHash = computed(() => {
@@ -21,7 +24,7 @@ const sourceHash = computed(() => {
 // 跳转到 Playground，将 Base64 编码作为 hash 参数，Playground 页面就能展示对应的用例源码
 function toPlayground() {
   window.open(
-    `${window.location.origin}/playground.html#${sourceHash.value}`,
+    `${window.location.origin}${site.value.base}playground.html#${sourceHash.value}`,
     '_blank',
   );
 }
