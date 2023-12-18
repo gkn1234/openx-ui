@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { generateCssVars, themeColorLevelsEnabledKeys } from '@openxui/styles';
-import { ConfigProviderProps, defaultConfigProviderProps } from './config-provider';
+import { ConfigProviderProps, defaultConfigProviderProps } from './props';
 
 const props = withDefaults(
   defineProps<ConfigProviderProps>(),
@@ -23,3 +23,4 @@ const cssVars = computed(() => generateCssVars(props.themeVars, {
     <slot />
   </component>
 </template>
+./props

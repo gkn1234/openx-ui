@@ -2,12 +2,21 @@
   "name": "@openxui/docs",
   "private": true,
   "scripts": {
+    "api": "tsx scripts/typedoc.ts",
     "dev": "vitepress dev . --host",
-    "build": "vitepress build .",
+    "build": "pnpm run api && vitepress build .",
     "preview": "vitepress preview . --host"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@openxui/ui": "workspace:^",
+    "@vue/repl": "^3.0.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-container": "^4.0.0"
+  },
   "devDependencies": {
+    "@types/markdown-it": "^13.0.7",
+    "typedoc": "^0.25.4",
+    "typedoc-plugin-markdown": "^3.17.1",
     "vitepress": "1.0.0-rc.31"
   }
 }

@@ -23,7 +23,7 @@ hero:
       link: /components/
     - theme: brand
       text: API 文档
-      link: /api/
+      link: /api/README
     - theme: brand
       text: 演练场
       link: /playground

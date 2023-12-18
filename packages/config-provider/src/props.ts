@@ -1,3 +1,4 @@
+/** @module ConfigProvider */
 import { Component } from 'vue';
 import { OpenxuiCssVarsConfig } from '@openxui/styles';
 import { InferVueDefaults } from '@openxui/shared';
@@ -11,6 +12,7 @@ export interface ConfigProviderProps {
   themeVars?: OpenxuiCssVarsConfig;
 }
 
+/** @hidden */
 export function defaultConfigProviderProps(): Required<InferVueDefaults<ConfigProviderProps>> {
   return {
     tag: 'div',

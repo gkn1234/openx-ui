@@ -44,6 +44,10 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "peerDependencies": {
     "vue": ">=3.0.0",
     "unocss": ">=0.54.1"

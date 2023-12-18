@@ -16,5 +16,7 @@ module.exports = {
     'stylistic/max-line-length': 100,
 
     'selector-class-pattern': null,
+
+    'custom-property-pattern': null,
   },
 };
