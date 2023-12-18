@@ -35,3 +35,9 @@
 [文章](https://juejin.cn/post/7270868354528755764)
 
 [代码](https://github.com/gkn1234/openx-ui/tree/chapter05)
+
+### 6. 建立带有 Demo 示例功能的文档网站
+
+[文章](https://juejin.cn/post/7313851652595531810)
+
+[代码](https://github.com/gkn1234/openx-ui/tree/chapter06)
